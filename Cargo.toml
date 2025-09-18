@@ -1,0 +1,24 @@
+[package]
+name = "asf"
+version = "0.1.0"
+edition = "2021"
+
+
+[profile.release]
+debug = "line-tables-only"
+lto = true
+[profile.dev]
+opt-level = 1  #without this searching takes forever
+
+[dependencies]
+bincode = "1.3.3"
+csv = "1.3.1"
+iced = { version = "0.13.1", features = ["lazy"]}
+iced_aw = { version = "0.12.2"}
+iced_core = "0.13.2"
+itertools = "0.14.0"
+quick_cache = { version = "0.6.16", features = ["stats"]}
+rayon = "1.11.0"
+serde = { version = "1.0.219", features = ["derive"] }
+tracing = "0.1.41"
+
